@@ -1,8 +1,8 @@
 <?php
- if(isset($_GET['btn'])){
-   $num1 = $_GET['num1'];
-   $num2 = $_GET['num2'];
-   $operator = $_GET['operator'];
+ if(isset($_POST['btn'])){
+   $num1 = $_POST['num1'];
+   $num2 = $_POST['num2'];
+   $operator = $_POST['operator'];
 
     function calculator($num1,$num2,$operator){
       if($operator == "add"){
@@ -25,8 +25,9 @@
 
  ?>
 <div class="container">
-  <form class="form-control" action="page.php" method="GET">
+  <form class="form-control" action="page.php" method="POST">
      <h3>Simple Calculator</h3>
+     <hr>
     <div class="">
         <input type="number" name="num1" value="" class="form-control" placeholder="Enter First Number">
     </div>
@@ -87,7 +88,7 @@
   .container{
     max-width: 500px;
     margin-top: 100px;
-    margin-left: 550px;
+    margin-left: 450px;
     justify-content: center;
     border: 1px solid black;
     border-radius: 10px;
